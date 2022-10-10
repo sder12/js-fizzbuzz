@@ -1,0 +1,39 @@
+:root {
+  --ms_background: #083b4c;
+  --numbers: #1389b2;
+  --fizz-numbers: #0bd6a1;
+  --buzz-numbers: #ffd166;
+  --fizzbuzz-numbers: #f0466f;
+}
+
+/* BACKGROUND */
+body{
+    background-color: var(--ms_background);
+}
+h1 {
+  color: white;
+}
+.bg-numb {
+  background-color: var(--numbers);
+}
+.bg-fzz {
+  background-color: var(--fizz-numbers);
+}
+.bg-bzz {
+  background-color: var(--buzz-numbers);
+}
+.bg-fzzbzz {
+  background-color: var(--fizzbuzz-numbers);
+}
+
+/* LAYOUT */
+.ms_row div{
+    width: calc(100% / 7 - 1em);
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+}
+.ms_row{
+    gap: 1em;
+}
