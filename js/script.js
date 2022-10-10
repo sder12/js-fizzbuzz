@@ -29,10 +29,17 @@ for (let i = 1; i <= 100; i++) {
   }
   console.log(contentDiv, backgroundDiv);
 
-  //con createElement creare all'interno della row > <div class="col"> ${contentDiv} </div>   -->
-  textDiv = `<div class= "col ${backgroundDiv}"> ${contentDiv}  </div>`;
-  console.log(textDiv);
-
   //OUTPUT innerHTML mode
-  row.innerHTML += textDiv;
+  //con createElement creare all'interno della row > <div class="col"> ${contentDiv} </div>   -->
+  // textDiv = `<div class= "col ${backgroundDiv}"> ${contentDiv}  </div>`;
+  // console.log(textDiv);  
+  // row.innerHTML += textDiv;
+
+  //OUTPUT create element mode
+  textDiv = document.createElement("div")
+  textDiv.classList.add("col");
+  textDiv.classList.add(backgroundDiv);
+  textDiv.innerHTML = contentDiv;
+  row.append(textDiv);
+  console.log(textDiv);    
 }
